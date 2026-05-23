@@ -23,3 +23,10 @@ In many regions, ISPs heavily throttle international traffic, severely disruptin
 Ensure you have the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) installed and authenticated:
 ```text
 gcloud auth login
+
+curl -sL [https://raw.githubusercontent.com/imgolamrabbani/cloudshell-tunnel/main/install.sh](https://raw.githubusercontent.com/imgolamrabbani/cloudshell-tunnel/main/install.sh) | bash
+
+
+
+To specify a custom port:
+cloudshell-tunnel 8080
