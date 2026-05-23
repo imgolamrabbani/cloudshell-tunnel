@@ -45,7 +45,8 @@ main() {
     log_info "Initializing secure tunnel on localhost:${LOCAL_PORT}..."
     log_info "Press Ctrl+C to terminate the connection."
 
-    gcloud cloud-shell ssh --authorize-session -- -N -D "${LOCAL_PORT}"
+    # FIX: Using --ssh-flag instead of bare arguments
+    gcloud cloud-shell ssh --authorize-session --ssh-flag="-N" --ssh-flag="-D" --ssh-flag="${LOCAL_PORT}"
     
     log_success "Tunnel established! Configure your browser/system to use SOCKS5 on 127.0.0.1:${LOCAL_PORT}"
     
